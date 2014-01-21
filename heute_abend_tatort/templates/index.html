@@ -1,0 +1,14 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Heute Abend Tatort?{% endblock %}
+{% block content %}
+<div class="container">
+  <h1>Heute Abend Tatort?</h1>
+  {% for i in episodes %}
+    <h2>{% print i[4] %}</h2>
+    {% print 'Ermittler: %s' % (i[5]) %}<br />
+    {% print 'Uhrzeit: %s' % (i[1]) %}<br />
+    {% print 'Programm: %s' % (i[2]) %}<br />
+    {% print '%s' % (i[6]) %}
+  {% endfor %}
+</div>
+{% endblock %}
